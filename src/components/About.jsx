@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Award, Briefcase, GraduationCap } from 'lucide-react';
-import profileImage from '../assets/venky.jpg';
+import profileImage from '../assets/bharat.jpg';
 
 const timeline = [
   {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, Download } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -104,18 +104,36 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          <motion.button 
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+          <motion.div 
+            className="flex justify-center gap-4 flex-wrap"
             variants={itemVariants}
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleClick}
           >
-            Get In Touch
-          </motion.button>
+            <motion.button 
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleClick}
+            >
+              Get In Touch
+            </motion.button>
+
+            <motion.a 
+              href="/path-to-your-resume.pdf"
+              download
+              className="px-8 py-3 bg-white dark:bg-gray-800 border-2 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 10px 25px rgba(59, 130, 246, 0.2)"
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download size={20} />
+              Download Resume
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </motion.section>
